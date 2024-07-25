@@ -10,7 +10,6 @@ const Booklist = () => {
         const response = await fetch ('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books');
         const allBooks = await response.json();
         setBooks(allBooks.books);
-        console.log(books)
       } catch(error) {
       console.log(error);
       }
@@ -25,12 +24,12 @@ const Booklist = () => {
 
         {books.map((book) =>{
           return (
-            <Link key={book.id} to={`/products/${book.id}`}>
+            <Link key={book.id} to={`/books/${book.id}`}>
               <section>
                 <h2>{book.title} <br />
                     by {book.author}
                 </h2>
-                <img src={book.coverimage} alt="product image" />
+                <img src={book.coverimage} alt="Book image" />
               </section>
             </Link>
           )
