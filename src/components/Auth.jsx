@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-const Auth = ( { setToken }) => {
+const Auth = ( { token, setToken }) => {
   const [showLogin, setShowLogin] = useState(true);
 
   const [firstNameInput, setFNameInput] = useState("");
-  const [lastNameInput, setLNameInput] = useState("");
+  const [lastNameInput, setLNameInput] = useState("");1
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
 
@@ -50,6 +50,7 @@ const Auth = ( { setToken }) => {
       });
 
       const json = await response.json();
+      console.log(json)
       setToken(json.token);
       } catch (error){
         console.log(error);
