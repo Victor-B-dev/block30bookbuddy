@@ -16,8 +16,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Booklist />}/>
         <Route path='/books/:id' element={<BookDetails />} />
-        <Route path='/my-account' element={<Account token={token} />}/>
-        <Route path='/login' element={<Auth setToken={setToken} />} />
+        <Route path='/my-account' element={<Account token={token} setToken={setToken} />}/>
+        <Route path='/login' element={<Auth token={token} setToken={setToken} />} />
       </Routes>
 
     </>
