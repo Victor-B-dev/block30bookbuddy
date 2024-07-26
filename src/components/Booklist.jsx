@@ -19,23 +19,28 @@ const Booklist = () => {
 
 
   return (
-    <>
-      <h2>Bookbuddys Library Selection</h2>
+    <main>
+      <section>
+        <h2>Bookbuddys Library Selection</h2>
+      </section>
 
+      <section>
         {books.map((book) =>{
-          return (
-            <Link key={book.id} to={`/books/${book.id}`}>
-              <section>
-                <h2>{book.title} <br />
+          return (<article key={book.id}>
+              <Link key={book.id} to={`/books/${book.id}`}>
+                <section>
+                  <h2>{book.title} <br />
                     by {book.author}
-                </h2>
-                <img src={book.coverimage} alt="Book image" />
-              </section>
-            </Link>
+                  </h2>
+                  <img src={book.coverimage} alt="Book image" />
+                </section>
+              </Link>
+            </article>
           )
         })
         }
-    </>
+        </section>
+    </main>
   );
 }
 

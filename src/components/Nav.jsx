@@ -7,16 +7,18 @@ const Nav = ({ token, setToken }) => {
   }
   
   return (
-    <>
-      <Link to='/'>Home</Link><br />
-      { token ? 
-          <>
-            <Link to='/my-account'>My Account</Link><br />
+    <header>
+      <nav>
+        <Link to='/'>Home</Link><br />
+        { token ? 
+            <>
+              <Link to='/my-account'>My Account</Link><br />
             <button onClick={(logOutUser)}>Log Out</button>
-          </>
-        : <Link to='/login'>Log In / Register</Link>
-      }
-    </>
+            </>
+          : <Link to='/login'>Log In / Register</Link>
+        }
+      </nav>
+    </header>
   )
 }
 
