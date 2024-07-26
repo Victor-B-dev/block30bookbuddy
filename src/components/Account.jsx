@@ -60,9 +60,10 @@ const Account = ({ token, setToken }) => {
   }
 
   return (
-    <>
+    <main>
         <h2> Your Account Info</h2>
     
+        
         <p>Welcome {acctDetails.firstname} {acctDetails.lastname}</p>
         <p>Email: {acctDetails.email}</p>
         <p>Your checked out books are as follows:</p>
@@ -76,7 +77,7 @@ const Account = ({ token, setToken }) => {
         }
         <br />  
         <button onClick={(logOutUser)}>Log Me Out</button>
-    </>
+    </main>
   )
 }
 

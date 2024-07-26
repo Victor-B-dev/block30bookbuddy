@@ -1,10 +1,45 @@
-*{
+* {
   box-sizing: border-box;
-
-
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  text-align: center;
 }
 
 img {
   width: 300px;
+  height: auto
+}
+
+
+nav {
+  background: linear-gradient(149deg, rgba(0,0,0,1) 0%, rgba(118,0,147,1) 30%, rgba(122,4,150,1) 70%, rgba(0,0,0,1) 100%);
+  display: flex;
+  flex-direction: row;
+  color: gold;
+  text-align: center;
+  align-content: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 5vh
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+article {
+  width: 25%;
   height: auto
 }

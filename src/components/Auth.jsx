@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Auth = ( { token, setToken }) => {
+const Auth = ( { setToken }) => {
   const [showLogin, setShowLogin] = useState(true);
 
   const [firstNameInput, setFNameInput] = useState("");
@@ -61,7 +61,7 @@ const Auth = ( { token, setToken }) => {
 
 
   return (
-    <>
+    <main>
       <form>
         {
           showLogin ? 
@@ -87,10 +87,10 @@ const Auth = ( { token, setToken }) => {
 
         {
           showLogin ? 
-            <p>Not a member? <button onClick={() => { setShowLogin(false) }}>Register here</button></p> :
+            <p>Create an Account to checkout! <button onClick={() => { setShowLogin(false) }}>Register here</button></p> :
             <p>Already a member? <button onClick={() => { setShowLogin(true) }}>Log in here</button></p>
         }
-      </>
+      </main>
   )
 }
 

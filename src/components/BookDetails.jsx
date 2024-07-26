@@ -39,10 +39,10 @@ const BookDetails = ({ token }) => {
   }
 
   return (
-    <>
+    <main>
     {
       bookDetails.title ? 
-        <>
+        <article>
           <h2>{bookDetails.title}</h2>
           <h3>by {bookDetails.author}</h3>
           <img src={bookDetails.coverimage} alt="Book image"/>
@@ -52,10 +52,10 @@ const BookDetails = ({ token }) => {
             <button onClick={bookCheckOut}>Check Out This Book</button>
             :null
           }
-        </> 
+        </article> 
         : null
     }
-    </>
+    </main>
   )
 }
 
