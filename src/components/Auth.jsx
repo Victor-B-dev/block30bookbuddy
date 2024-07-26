@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Auth = ( { token, setToken }) => {
   const [showLogin, setShowLogin] = useState(true);
@@ -8,6 +9,7 @@ const Auth = ( { token, setToken }) => {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
 
+  const navigate = useNavigate()
 
   const registerUser = async() => {
     try {
@@ -50,8 +52,8 @@ const Auth = ( { token, setToken }) => {
       });
 
       const json = await response.json();
-      console.log(json)
       setToken(json.token);
+      navigate('/');
       } catch (error){
         console.log(error);
       }
