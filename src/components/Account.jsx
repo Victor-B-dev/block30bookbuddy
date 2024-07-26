@@ -28,7 +28,14 @@ const Account = ({ token, setToken }) => {
     
         <p>Welcome {acctDetails.firstname} {acctDetails.lastname}</p>
         <p>Email: {acctDetails.email}</p>
-        <p>Your current books checked out: {acctDetails.books}</p>
+        {acctDetails.books.map((book) => {
+          return (<p key={book.id}> {book.title} by {book.author} </p>
+          )
+        })
+
+
+        }  
+      
           
     </>
   )
