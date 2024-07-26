@@ -6,11 +6,12 @@ import BookDetails from './components/BookDetails.jsx'
 import Account from './components/Account.jsx'
 import Auth from './components/Auth.jsx'
 
+
 const App = () => {
   const [token, setToken] = useState("");
 
   return (
-    <body>
+    <>
       <Nav token={token} setToken={setToken}/>
 
       <Routes>
@@ -20,7 +21,7 @@ const App = () => {
         <Route path='/login' element={<Auth token={token} setToken={setToken} />} />
       </Routes>
 
-    </body>
+    </>
   )
 }
 
